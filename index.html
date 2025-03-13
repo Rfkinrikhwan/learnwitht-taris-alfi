@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Elements Documentation</title>
+    <meta
+      name="description"
+      content="A comprehensive guide to HTML5 elements including headings, paragraphs, line breaks, horizontal rules, superscript, subscript, and lists." />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-10 bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold text-blue-600"
+          >HTML<span class="text-slate-800">5 Elements</span></a
+        >
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="#headings"
+            class="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+            >Headings</a
+          >
+          <a
+            href="#paragraphs"
+            class="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+            >Paragraphs</a
+          >
+          <a
+            href="#line-breaks"
+            class="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+            >Line Breaks</a
+          >
+          <a
+            href="#horizontal-rules"
+            class="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+            >Horizontal Rules</a
+          >
+          <a
+            href="#superscript-subscript"
+            class="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+            >Sup & Sub</a
+          >
+          <a
+            href="#lists"
+            class="text-slate-700 hover:text-blue-600 font-medium transition-colors"
+            >Lists</a
+          >
+          <a
+            href="networking.html"
+            class="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >Networking Guide</a
+          >
+        </div>
+        <button class="md:hidden p-2 rounded-md hover:bg-slate-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">HTML5 Documentation</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+          A comprehensive guide to HTML5 elements and their usage
+        </p>
+        <div class="mt-10 flex justify-center space-x-4">
+          <a
+            href="#headings"
+            class="bg-white text-blue-700 px-6 py-3 rounded-md font-medium hover:bg-blue-50 transition-colors">
+            Get Started
+          </a>
+          <a
+            href="networking.html"
+            class="bg-blue-700 text-white border border-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors">
+            Networking Guide
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+      <!-- Headings Section -->
+      <section id="headings" class="mb-20 scroll-mt-20">
+        <h2
+          class="text-3xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">
+          Headings
+        </h2>
+        <p class="text-lg text-slate-700 mb-8">
+          HTML provides six levels of headings, from h1 (the most important) to
+          h6 (the least important). Headings are used to structure your document
+          and make it more readable.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Example:</h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <h1 class="text-4xl font-bold mb-4">This is an h1 heading</h1>
+              <h2 class="text-3xl font-bold mb-4">This is an h2 heading</h2>
+              <h3 class="text-2xl font-bold mb-4">This is an h3 heading</h3>
+              <h4 class="text-xl font-bold mb-4">This is an h4 heading</h4>
+              <h5 class="text-lg font-bold mb-4">This is an h5 heading</h5>
+              <h6 class="text-base font-bold">This is an h6 heading</h6>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre
+                class="font-mono text-sm"><code>&lt;h1&gt;This is an h1 heading&lt;/h1&gt;
+&lt;h2&gt;This is an h2 heading&lt;/h2&gt;
+&lt;h3&gt;This is an h3 heading&lt;/h3&gt;
+&lt;h4&gt;This is an h4 heading&lt;/h4&gt;
+&lt;h5&gt;This is an h5 heading&lt;/h5&gt;
+&lt;h6&gt;This is an h6 heading&lt;/h6&gt;</code></pre>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">Best Practices:</h4>
+              <ul class="list-disc pl-5 text-blue-700 space-y-1">
+                <li>Use only one h1 per page</li>
+                <li>Follow a hierarchical structure</li>
+                <li>Don't skip heading levels</li>
+                <li>Use headings for structure, not styling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Paragraphs Section -->
+      <section id="paragraphs" class="mb-20 scroll-mt-20">
+        <h2
+          class="text-3xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">
+          Paragraphs
+        </h2>
+        <p class="text-lg text-slate-700 mb-8">
+          The paragraph element (p) is used to group related content into
+          paragraphs. Browsers automatically add some space before and after
+          each paragraph.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Example:</h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <p class="mb-4">
+                This is the first paragraph. HTML paragraphs are defined with
+                the p tag. A paragraph always starts on a new line, and browsers
+                automatically add some white space before and after a paragraph.
+              </p>
+              <p>
+                This is the second paragraph. The browser will automatically
+                remove any extra spaces and lines when the page is displayed.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre class="font-mono text-sm"><code>&lt;p&gt;
+  This is the first paragraph. HTML paragraphs are defined with the p tag.
+  A paragraph always starts on a new line, and browsers automatically add some white space before and after a paragraph.
+&lt;/p&gt;
+&lt;p&gt;
+  This is the second paragraph. The browser will automatically remove any extra spaces and lines when the page is displayed.
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">Note:</h4>
+              <p class="text-blue-700">
+                Browsers automatically remove extra whitespace and line breaks
+                in HTML. To add a line break within a paragraph, use the br
+                element.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Line Breaks Section -->
+      <section id="line-breaks" class="mb-20 scroll-mt-20">
+        <h2
+          class="text-3xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">
+          Line Breaks (br)
+        </h2>
+        <p class="text-lg text-slate-700 mb-8">
+          The br element creates a line break in text. It's useful when you want
+          to break a line without starting a new paragraph. The br element is an
+          empty element, which means it has no closing tag.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Example:</h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <p>
+                This is a paragraph<br />with a line break<br />and another line
+                break.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre class="font-mono text-sm"><code>&lt;p&gt;
+  This is a paragraph&lt;br&gt;with a line break&lt;br&gt;and another line break.
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">When to use:</h4>
+              <ul class="list-disc pl-5 text-blue-700 space-y-1">
+                <li>Poetry or song lyrics</li>
+                <li>Addresses</li>
+                <li>
+                  When you need a line break without starting a new paragraph
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal Rules Section -->
+      <section id="horizontal-rules" class="mb-20 scroll-mt-20">
+        <h2
+          class="text-3xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">
+          Horizontal Rules (hr)
+        </h2>
+        <p class="text-lg text-slate-700 mb-8">
+          The hr element creates a horizontal rule (line) that represents a
+          thematic break in content. It's often used to separate content
+          sections or indicate a change in topic.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Example:</h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <p class="mb-4">This is content before the horizontal rule.</p>
+              <hr class="my-4 border-t border-slate-300" />
+              <p>This is content after the horizontal rule.</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre
+                class="font-mono text-sm"><code>&lt;p&gt;This is content before the horizontal rule.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is content after the horizontal rule.&lt;/p&gt;</code></pre>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">
+                Styling with CSS:
+              </h4>
+              <p class="text-blue-700 mb-2">
+                You can style the hr element with CSS to change its appearance:
+              </p>
+              <div
+                class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+                <pre class="font-mono text-sm"><code>hr {
+  height: 2px;
+  background-color: #3b82f6;
+  border: none;
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Superscript and Subscript Section -->
+      <section id="superscript-subscript" class="mb-20 scroll-mt-20">
+        <h2
+          class="text-3xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">
+          Superscript and Subscript
+        </h2>
+        <p class="text-lg text-slate-700 mb-8">
+          The sup element defines superscript text, and the sub element defines
+          subscript text. These are commonly used in mathematical formulas,
+          chemical formulas, and footnotes.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Example:</h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <p class="mb-4">
+                E = mc<sup>2</sup> is Einstein's famous equation.
+              </p>
+              <p class="mb-4">Water is H<sub>2</sub>O.</p>
+              <p>
+                This is the 1<sup>st</sup> example of a footnote<sup>[1]</sup>.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre class="font-mono text-sm"><code>&lt;p&gt;
+  E = mc&lt;sup&gt;2&lt;/sup&gt; is Einstein's famous equation.
+&lt;/p&gt;
+&lt;p&gt;
+  Water is H&lt;sub&gt;2&lt;/sub&gt;O.
+&lt;/p&gt;
+&lt;p&gt;
+  This is the 1&lt;sup&gt;st&lt;/sup&gt; example of a footnote&lt;sup&gt;[1]&lt;/sup&gt;.
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">Common uses:</h4>
+              <ul class="list-disc pl-5 text-blue-700 space-y-1">
+                <li>
+                  <strong>Superscript (sup):</strong> Exponents, footnotes,
+                  ordinal numbers
+                </li>
+                <li>
+                  <strong>Subscript (sub):</strong> Chemical formulas,
+                  mathematical variables
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lists Section -->
+      <section id="lists" class="mb-20 scroll-mt-20">
+        <h2
+          class="text-3xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">
+          Lists
+        </h2>
+        <p class="text-lg text-slate-700 mb-8">
+          HTML provides three types of lists: ordered lists (ol), unordered
+          lists (ul), and description lists (dl). Each list item in an ordered
+          or unordered list is defined with the li element.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">
+              Unordered List Example:
+            </h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <h4 class="font-semibold mb-2">Shopping List:</h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Milk</li>
+                <li>Eggs</li>
+                <li>Bread</li>
+                <li>Butter</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre
+                class="font-mono text-sm"><code>&lt;h4&gt;Shopping List:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+  &lt;li&gt;Butter&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">
+              Ordered List Example:
+            </h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <h4 class="font-semibold mb-2">Recipe Instructions:</h4>
+              <ol class="list-decimal pl-5 space-y-1">
+                <li>Preheat the oven to 350°F</li>
+                <li>Mix all ingredients in a bowl</li>
+                <li>Pour into a baking dish</li>
+                <li>Bake for 30 minutes</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre
+                class="font-mono text-sm"><code>&lt;h4&gt;Recipe Instructions:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Preheat the oven to 350°F&lt;/li&gt;
+  &lt;li&gt;Mix all ingredients in a bowl&lt;/li&gt;
+  &lt;li&gt;Pour into a baking dish&lt;/li&gt;
+  &lt;li&gt;Bake for 30 minutes&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">
+              Description List Example:
+            </h3>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+              <h4 class="font-semibold mb-2">HTML Terms:</h4>
+              <dl>
+                <dt class="font-semibold mt-2">HTML</dt>
+                <dd class="pl-4">
+                  HyperText Markup Language, the standard language for creating
+                  web pages.
+                </dd>
+
+                <dt class="font-semibold mt-2">CSS</dt>
+                <dd class="pl-4">
+                  Cascading Style Sheets, used for styling HTML documents.
+                </dd>
+
+                <dt class="font-semibold mt-2">JavaScript</dt>
+                <dd class="pl-4">
+                  A programming language that enables interactive web pages.
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">Code:</h3>
+            <div
+              class="bg-slate-800 text-slate-100 p-4 rounded-md overflow-x-auto">
+              <pre
+                class="font-mono text-sm"><code>&lt;h4&gt;HTML Terms:&lt;/h4&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language, the standard language for creating web pages.&lt;/dd&gt;
+  
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets, used for styling HTML documents.&lt;/dd&gt;
+  
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;A programming language that enables interactive web pages.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">List types:</h4>
+              <ul class="list-disc pl-5 text-blue-700 space-y-1">
+                <li><strong>ul:</strong> Unordered list (bullet points)</li>
+                <li><strong>ol:</strong> Ordered list (numbers or letters)</li>
+                <li>
+                  <strong>dl:</strong> Description list with terms (dt) and
+                  descriptions (dd)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">
+              HTML<span class="text-blue-400">5 Elements</span>
+            </h3>
+            <p class="text-slate-300">
+              A comprehensive guide to HTML5 elements and their usage. Created
+              to help beginners learn HTML effectively.
+            </p>
+            <p class="text-slate-300 mt-4">
+              Created by
+              <span class="font-semibold text-blue-300">DM Alfi Syahrin</span>
+              and <span class="font-semibold text-blue-300">Rizna Taris</span>
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-slate-300">
+              <li>
+                <a
+                  href="#headings"
+                  class="hover:text-blue-400 transition-colors"
+                  >Headings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#paragraphs"
+                  class="hover:text-blue-400 transition-colors"
+                  >Paragraphs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#line-breaks"
+                  class="hover:text-blue-400 transition-colors"
+                  >Line Breaks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#horizontal-rules"
+                  class="hover:text-blue-400 transition-colors"
+                  >Horizontal Rules</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#superscript-subscript"
+                  class="hover:text-blue-400 transition-colors"
+                  >Sup & Sub</a
+                >
+              </li>
+              <li>
+                <a href="#lists" class="hover:text-blue-400 transition-colors"
+                  >Lists</a
+                >
+              </li>
+              <li>
+                <a
+                  href="networking.html"
+                  class="text-blue-400 hover:text-blue-300 transition-colors"
+                  >Networking Guide</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2 text-slate-300">
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                  class="hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MDN Web Docs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.w3schools.com/html/"
+                  class="hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3Schools</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://html.spec.whatwg.org/"
+                  class="hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >HTML Living Standard</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-slate-700 text-center text-slate-400">
+          <p>
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            HTML5 Elements Documentation by DM Alfi Syahrin and Rizna Taris. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
